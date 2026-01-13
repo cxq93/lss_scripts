@@ -45,13 +45,13 @@ URL-REGEX,^https?:\/\/m\.client\.10010\.com\/clientIndex\/api\/v1\/index\/queryI
 [Script]
 
 # 热搜词清空
-unicom_clean_search.js = type=http-response, pattern=^https?:\/\/m\.client\.10010\.com\/search_service\/search\/searchScrollWord, requires-body=true, timeout=10， script-path=https://raw.githubusercontent.com/cxq93/lss_scripts/refs/heads/main/js/unicom_clean_search.js?token=GHSAT0AAAAAADTE2WHJR53IXUE2D6X67FKU2LGNAFQ
+unicom_clean_search.js = type=http-response, pattern=^https?:\/\/m\.client\.10010\.com\/search_service\/search\/searchScrollWord, requires-body=true, timeout=10， script-path=https://raw.githubusercontent.com/cxq93/lss_scripts/refs/heads/main/js/unicom_clean_search.js
 
 # 首页 ICON 清理
-unicom_home_icon.js = type=http-response, pattern=^https?:\/\/m\.client\.10010\.com\/clientIndex\/homefusion\/fuInter, requires-body=true, timeout=10， script-path=https://raw.githubusercontent.com/cxq93/lss_scripts/refs/heads/main/js/unicom_home_icon.js?token=GHSAT0AAAAAADTE2WHJ3D5XEQZOCQHLP5CC2LGNA4Q
+unicom_home_icon.js = type=http-response, pattern=^https?:\/\/m\.client\.10010\.com\/clientIndex\/homefusion\/fuInter, requires-body=true, timeout=10， script-path=https://raw.githubusercontent.com/cxq93/lss_scripts/refs/heads/main/js/unicom_home_icon.js
 
 # 通用 data={} 清空脚本
-unicom_empty_data.js = type=http-response, pattern=^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/(myWallet|myPoints|myColorfulRingtone|newUserInfo|getDeviceInfo), requires-body=true, timeout=10， script-path=https://raw.githubusercontent.com/cxq93/lss_scripts/refs/heads/main/js/unicom_empty_data.js?token=GHSAT0AAAAAADTE2WHIYR4AXGVUNVBY3SPO2LGNBHQ
+unicom_empty_data.js = type=http-response, pattern=^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/(myWallet|myPoints|myColorfulRingtone|newUserInfo|getDeviceInfo), requires-body=true, timeout=10， script-path=https://raw.githubusercontent.com/cxq93/lss_scripts/refs/heads/main/js/unicom_empty_data.js
 
 
 [MITM]
