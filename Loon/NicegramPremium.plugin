@@ -23,7 +23,7 @@ DOMAIN,firebaseinstallations.googleapis.com,REJECT
 
 [Script]
 # Use refined regex and point to the js file in the repository
-http-response ^https?:\/\/nicegram\.cloud\/api\/v\d+\/(ai-assistant\/purchase-list|telegram\/auth|user\/info|unblock-feature|adsgram\/get-banner|att\/scroll-to-earn\/user-info|att\/scroll-to-earn\/config|att\/scroll-to-earn\/ads-list|airdrop\/task-list) script-path=https://raw.githubusercontent.com/ChangXaoqiang/lss_scripts/refs/heads/main/js/NicegramPremium.js, requires-body=true, timeout=60, tag=Nicegram Premium 𝕏, argument={ "attPoints": "{attPoints}", "gems": "{gems}" }
+http-response ^https?:\/\/nicegram\.cloud\/api\/v\d+\/(ai-assistant\/purchase-list|telegram\/auth|user\/info|unblock-feature|adsgram\/get-banner|att\/scroll-to-earn\/user-info|att\/scroll-to-earn\/config|att\/scroll-to-earn\/ads-list|airdrop\/task-list) script-path=https://raw.githubusercontent.com/cxq93/lss_scripts/refs/heads/main/js/NicegramPremium.js?token=GHSAT0AAAAAADTE2WHJRVD667U4PQGJ64TQ2LGNMTA, requires-body=true, timeout=60, tag=Nicegram Premium 𝕏, argument={ "attPoints": "{attPoints}", "gems": "{gems}" }
 
 [Mitm]
 hostname = nicegram.cloud
