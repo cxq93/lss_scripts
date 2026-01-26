@@ -2,8 +2,7 @@
 #!desc = Vip+会员画质+去广告,页面优化
 #!author = WeiGiegie
 #!homepage = https://t.me/GieGie777
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/MGTV.png
-#!date = 2025
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5c/d9/b0/5cd9b0fd-cfd5-3e6b-63a4-bfa3e4b237e7/AppIcon-0-0-1x_U007ephone-0-1-0-0-0-85-220.png/400x400ia-75.webp
 
 [Rewrite]
 # 拒绝广告请求
