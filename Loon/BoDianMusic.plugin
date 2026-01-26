@@ -1,0 +1,14 @@
+#!name=波点音乐
+#!desc=波点音乐去广告
+#!homepage=https://yfamily.ml
+#!author=zqzess
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/06/f8/ba/06f8ba24-37fe-617f-9d31-7fc601be9d08/Placeholder.mill/400x400bb-75.webp
+
+[URL Rewrite]
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/musicResource\/.+ _ reject
+^https:\/\/bodiancdn\.kuwo\.cn\/.+\.mp4 _ reject
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/view\?uid _ reject
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid _ reject
+
+[MITM]
+hostname = *.kuwo.cn
