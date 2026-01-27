@@ -1,0 +1,16 @@
+# Loon
+# 阿基米德FM去广告
+#让FM回归纯净调频。
+
+[Rewrite]
+# 移除阿基米德FM开屏广告
+^https?:\/\/a\.ajmide\.com\/v2\/get_init_config\.php(\?.*)?$ response-body-json-jq 'if (.data? and (.data.loading_img? != null)) then (.data.loading_img = []) else . end'
+# 移除阿基米德FM搜索框推广
+^https?:\/\/(a\.ajmide\.com\/(v33\/get_search_keywords\.php|v8\/get_bar_img\.php)|s\.ajmide\.com\/v1\/get_search_home\.php)(\?.*)?$ response-body-json-jq 'if (.data? and ((.data|has("hotImg")) or (.data|has("hotKeywords")) or (.data|has("hotPrograms")) or (.data|has("boCaiList")) or (.data|has("adInfo")))) then (del(.data.hotImg) | .data.hotKeywords=[] | .data.hotPrograms=[] | .data.boCaiList=[] | .data.adInfo=[]) elif (.data? and (.data|has("search_bar_banner"))) then del(.data.search_bar_banner) elif (.data? and (.data|has("list"))) then (.data.list=[]) else . end'
+# 移除阿基米德FM多余tab
+^https?:\/\/a\.ajmide\.com\/v30\/index_tab\.php(\?.*)?$ response-body-json-jq 'if (.data|type=="array") then (.data = ([.data[] | select(((.tab_id|tostring)=="2") or (.tab_name=="听广播"))] | map(.position="1" | .fixed="1"))) else . end'
+# 移除阿基米德FM听广播页面推广
+^https?:\/\/a\.ajmide\.com\/(v28\/get_radio_station\.php|index\.php\?r=program(%2F|\/)radio-station-top-list)(\?.*)?$ response-body-json-jq 'if (.data? and (.data|type=="object") and (.data|has("programClassification"))) then (.data |= del(.liveList,.netWorkProgram,.programClassification)) elif (.data? and (.data|type=="object") and (.data|has("img_path"))) then (.data.img_path="" | .data.schema="" | .data.title="" | .data.resource_id="" | .data.topicId=0) else . end'
+
+[MITM]
+hostname=a.ajmide.com,s.ajmide.com
